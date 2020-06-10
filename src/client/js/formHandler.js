@@ -1,7 +1,7 @@
 
 function handleSubmit(event) {
     event.preventDefault()
-    const url = 'http://localhost:8081/alyienapi'
+    const url = 'http://localhost:8081/aylienapi'
 
     // check what text was put into the form field
     let formText = document.getElementById('name').value
@@ -27,6 +27,7 @@ const getData = async (url) => {
     }
 }
 
+// POST
 const postData = async (url = '', data = {}) => {
     console.log(data)
     const response = await fetch(url, {

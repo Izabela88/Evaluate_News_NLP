@@ -37,10 +37,6 @@ app.get('/test', function (req, res) {
     res.send(mockAPIResponse)
 })
 
-// app.get("/all", (req, res) => {
-//     console.log(projectData);
-//     res.send(projectData);
-// })
 
 app.get('/all', getData)
 
@@ -49,8 +45,7 @@ function getData(req, res) {
     console.log(projectData);
 }
 
-
-// app endpoint
+// App endpoint
 projectData = {};
 
 app.post('/aylienapi', function (req, res) {
@@ -76,4 +71,3 @@ app.post('/aylienapi', function (req, res) {
         console.log("error", error)
     }
 });
-
