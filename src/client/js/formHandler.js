@@ -23,7 +23,7 @@ const getData = async (url) => {
         console.log(data);
         return data;
     } catch (error) {
-        console.log(error("error"));
+        console.log(error);
     }
 }
 
@@ -43,7 +43,7 @@ const postData = async (url = '', data = {}) => {
         console.log(newData);
         return newData;
     } catch (error) {
-        console.log(error("error"));
+        console.log(error);
     }
 }
 
@@ -58,7 +58,7 @@ const updateInterface = async () => {
         document.querySelector('#polarity').innerHTML = "Polarity: " + allData.polarity;
         document.querySelector('#subjectivity').innerHTML = "Subjectivity: " + allData.subjectivity;
     } catch (error) {
-        console.log(error("error"));
+        console.log(error);
     }
 }
 
