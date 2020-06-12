@@ -4,14 +4,17 @@ function handleSubmit(event) {
     const url = 'http://localhost:8081/aylienapi'
 
     // check what text was put into the form field
-    let formText = document.getElementById('name').value
-    Client.checkForName(formText)
+    let formText = document.getElementById('url_main').value;
+    console.log(formText)
+    const valid = Client.ValidURL(formText)
     console.log("Form Submitted")
-
-    postData(url, { formText })
-        .then(function () {
-            updateInterface();
-        })
+    if (valid) {
+        postData(url, { formText })
+            .then(function () {
+                updateInterface();
+            })
+        alert("Your data should display below form!");
+    }
 }
 //GET Request
 const getData = async (url) => {
@@ -36,7 +39,7 @@ const postData = async (url = '', data = {}) => {
         headers: {
             'content-type': 'application/json',
         },
-        body: JSON.stringify(data),
+        body: JSON.stringify({ url: data }),
     });
     try {
         const newData = await response.json();
