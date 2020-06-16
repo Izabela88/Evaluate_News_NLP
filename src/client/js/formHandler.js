@@ -16,6 +16,7 @@ function handleSubmit(event) {
         alert("Your data should display below form!");
     }
 }
+
 //GET Request
 const getData = async (url) => {
     //set variable to hold fetch calls return
