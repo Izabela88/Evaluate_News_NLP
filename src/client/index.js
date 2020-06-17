@@ -9,7 +9,6 @@ import './styles/header.scss';
 console.log(ValidURL);
 console.log(handleSubmit);
 
-
 export {
   handleSubmit,
   ValidURL,

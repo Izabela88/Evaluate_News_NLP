@@ -37,7 +37,6 @@ app.get('/test', function (req, res) {
     res.send(mockAPIResponse)
 })
 
-
 app.get('/all', getData)
 
 function getData(req, res) {
@@ -58,7 +57,7 @@ app.post('/aylienapi', function (req, res) {
             mode: 'document'
         },
             function (error, response) {
-                if (error === null) {
+                if (!error) {
                     projectData.text = response.text;
                     projectData.polarity = response.polarity;
                     projectData.subjectivity = response.subjectivity;
